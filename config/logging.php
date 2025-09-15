@@ -51,6 +51,15 @@ return [
     */
 
     'channels' => [
+	
+	 /* =========== [START] A09 – Logging & Monitoring  =========== */
+'security' => [
+    'driver' => 'single',
+    'path'   => storage_path('logs/security.log'),
+    'level'  => 'notice',          // notice / warning / alert …
+],
+	/* =========== [END] A09 – Logging & Monitoring  =========== */
+
 
         'stack' => [
             'driver' => 'stack',

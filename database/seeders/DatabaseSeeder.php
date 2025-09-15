@@ -19,7 +19,19 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]); */
-		
+		// in DatabaseSeeder.php (or tinker once)
+\App\Models\User::factory()->create([
+    'email' => 'md5@example.com',
+    'password' => md5('secret123'),      // MD5 for the vulnerable demo
+]);
+
+\App\Models\User::factory()->create([
+    'email' => 'bcrypt@example.com',
+    'password' => bcrypt('secret123'),   // bcrypt for the secure demo
+]);
+
+
 		 $this->call(ShipmentSeeder::class);
+		 
     }
 }

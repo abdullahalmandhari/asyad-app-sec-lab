@@ -15,6 +15,24 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+					
+					   <x-nav-link :href="route('shipments.index')" :active="request()->routeIs('shipments.index')">
+                        {{ __('Shipments') }}
+                    </x-nav-link>
+					
+					   <x-nav-link :href="route('shipment_search')" :active="request()->routeIs('shipment_search')">
+                        {{ __('Search') }}
+                    </x-nav-link>
+					   <x-nav-link :href="route('config')" :active="request()->routeIs('config')">
+                        {{ __('config') }}
+                    </x-nav-link> <x-nav-link :href="route('load_components')" :active="request()->routeIs('load_components')">
+                        {{ __('Settings') }}
+                    </x-nav-link>  <x-nav-link :href="route('modules.upload')" :active="request()->routeIs('modules.upload')">
+                        {{ __('Update') }}
+                    </x-nav-link>
+               <x-nav-link :href="route('proxy.form')" :active="request()->routeIs('proxy.form')">
+                        {{ __('Avatar') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -31,6 +49,7 @@
                                 </svg>
                             </div>
                         </button>
+						
                     </x-slot>
 
                     <x-slot name="content">
